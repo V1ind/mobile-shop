@@ -7,13 +7,13 @@ const ProductInfo = () => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    console.log("Product ID:", productId); // Debug
+    console.log("Product ID:", productId); //  for Debuging
     const fetchProduct = async () => {
       try {
         const res = await axios.get(
           `http://localhost:3001/products/${productId}`
         );
-        console.log("Product Data:", res.data); // Debug
+        console.log("Product Data:", res.data); // for Debuging
         setProduct(res.data);
       } catch (err) {
         console.error("Error fetching product:", err);

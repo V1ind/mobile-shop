@@ -50,7 +50,7 @@ const UserProfilePage = () => {
           <br />
           <input
             {...register("age")}
-            placeholder="Age"
+            placeholder="    Age"
             type="number"
             className="Age"
           />
@@ -60,7 +60,7 @@ const UserProfilePage = () => {
           {errors.email && <p>{errors.email.message}</p>}
           <br />
 
-          <select {...register("gender")} className="Gender">
+          <select {...register("gender")} className="Gender"  >
             <option value="female">Female</option>
             <option value="male">Male</option>
             <option value="other">Read The Bible</option>

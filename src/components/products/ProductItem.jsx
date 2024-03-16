@@ -38,8 +38,8 @@ const ProductItem = ({ product }) => {
       >
         Add to Bag
       </button>
-      <button>
-        <Link to={`/products/${product.id}`}>INFO</Link>
+      <button className="info-button">
+        <Link className="" to={`/products/${product.id}`}>INFO</Link>
       </button>
     </li>
   );

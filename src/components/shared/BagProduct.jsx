@@ -1,6 +1,7 @@
 import { useDispatch } from "react-redux";
 import { removeFromBag } from "../../store/action-creator/action";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const BagProduct = ({ item }) => {
   const dispatch = useDispatch();
@@ -25,6 +26,9 @@ const BagProduct = ({ item }) => {
         onClick={() => dispatch(removeFromBag({ id: item.id, count }))}
       >
         Remove from Bag
+      </button>
+      <button className="info-button">
+        <Link to={`/products/${item.id}`}>INFO</Link>
       </button>
     </li>
   );

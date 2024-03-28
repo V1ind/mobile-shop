@@ -30,7 +30,7 @@ const ProductItem = ({ product }) => {
       <div className="product-name">{product.name} </div>
       <div className="product-price">${product.price}</div>
 
-      <input type="number" onChange={changeCount} value={count} />
+      <div> <input type="number" onChange={changeCount} value={count} /></div>
       <img src={product.image} alt={product.name} />
       <button
         disabled={product.quantity - bagProductCount === 0}
@@ -38,9 +38,9 @@ const ProductItem = ({ product }) => {
       >
         Add to Bag
       </button>
-      <button className="info-button">
-        <Link className="" to={`/products/${product.id}`}>INFO</Link>
-      </button>
+
+      <Link className="info-button" to={`/products/${product.id}`}>Details</Link>
+
     </li>
   );
 };

@@ -26,7 +26,7 @@ const UserProfilePage = () => {
           .integer("Age must be an integer")
           .min(16, "Age must be between 16 and 100")
           .max(100, "Age must be between 16 and 100"),
-        email: string().email(),
+        email: string().email().required(),
         createdOn: date().default(() => new Date()),
       })
     ),

@@ -17,19 +17,19 @@ const BagProduct = ({ item }) => {
     <li key={item.id}>
       <div className="product-name">{item.name} </div>
       <div className="product-price">${item.price}</div>
-      <div>{item.count}</div>
+      <div className="product-count">{item.count}</div>
       <img src={item.image} alt={item.name} />
 
-      <input type="number" value={count} onChange={changeCount} />
+      <div><input type="number" value={count} onChange={changeCount} /></div>
       <button
         className="remove-button"
         onClick={() => dispatch(removeFromBag({ id: item.id, count }))}
       >
         Remove from Bag
       </button>
-      <button className="info-button">
-        <Link to={`/products/${item.id}`}>INFO</Link>
-      </button>
+
+      <Link className="info-button" to={`/products/${item.id}`}>INFO</Link>
+
     </li>
   );
 };
